@@ -32,9 +32,9 @@ client.on('message', async (message) => {
         if (isCmd) {
             console.log(`[CMD] From (${contact.pushname}) ~> ${message.body}`)
         } else if (ishalo) {
-            message.reply("hai, ada yang bisa bot bantu?");
+            message.reply("hai, ada yang bisa xyroo bantu?");
         } else if (args.length < 2) {
-            message.reply("Maaf, tolong kasih bot pertanyaan lebih detail & spesifik lagi :)");
+            message.reply("Maaf, tolong kasih xyroo pertanyaan yg lebih spesifik lg :)");
         } else if (!chat.isGroup) {
             const response = await openai.createCompletion({
               model: "text-davinci-003",
@@ -46,7 +46,7 @@ client.on('message', async (message) => {
               presence_penalty: 0,
             });
             const resultnya = response.data.choices[0].text;
-            client.sendMessage(from ,"*OpenAI BOT*" + resultnya);
+            client.sendMessage(from ,"*Xyroo Mahiru*" + resultnya);
             console.log(`[!] Message From (${contact.pushname}) ~> ${message.body}`)
         }
     } catch (err) {

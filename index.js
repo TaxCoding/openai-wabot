@@ -1,7 +1,7 @@
 const qrcode = require('qrcode-terminal')
 const  { Client, LocalAuth } = require('whatsapp-web.js')
 const { Configuration, OpenAIApi } = require("openai")
-const keynya = "Insert Your apikey"  //Input your OpenAI api-Key -> https://beta.openai.com/account/api-keys
+const keynya = "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"  //Input your OpenAI api-Key -> https://beta.openai.com/account/api-keys
 const configuration = new Configuration({
   apiKey: keynya,
 });
